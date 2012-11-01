@@ -45,6 +45,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 nmap <Leader>rs :py UltiSnips_Manager.reset()<CR>
 
 
+"Command T mapping
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 filetype plugin indent on 
 
