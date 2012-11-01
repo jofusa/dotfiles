@@ -7,6 +7,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
 
 Bundle 'Syntastic' 
 Bundle 'altercation/vim-colors-solarized' 
