@@ -31,6 +31,7 @@ Bundle "ragtag.vim"
 
 
 if has('python')
+    Bundle 'klen/python-mode'
     Bundle 'SirVer/ultisnips'
     Bundle "jmcantrell/vim-virtualenv"
     Bundle 'szw/rope-vim'
@@ -52,7 +53,7 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 filetype plugin indent on 
 
-
+let g:UltiSnipsEditSplit = "vertical"
 
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
@@ -64,13 +65,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 
 
 
-"let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
-"let g:neocomplcache_enable_smart_case = 1
-"let g:neocomplcache_enable_camel_case_completion = 0 " Enable camle case completion
-"let g:neocomplcache_omni_functions = {
-"      \ 'python' : 'RopeCompleteFunc',
-"      \ }
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 0 " Enable camle case completion
+let g:neocomplcache_omni_functions = {
+      \ 'python' : 'RopeCompleteFunc',
+      \ }
 
 if has('python')
     let g:easytags_python_enabled = 1
@@ -94,8 +95,8 @@ set showcmd                     " display incomplete commands
 
 "" Whitespace
 ""set nowrap                      " don't wrap lines
-"set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
-"set expandtab                   " use spaces, not tabs (optional)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -131,6 +132,57 @@ function! s:RunShellCommand(cmdline)
   setlocal nomodifiable
   1
 endfunction
+
+
+
+" Load rope plugin
+let g:pymode_rope = 1
+
+" Auto create and open ropeproject
+let g:pymode_rope_auto_project = 1
+
+" Enable autoimport
+let g:pymode_rope_enable_autoimport = 1
+
+" Auto generate global cache
+let g:pymode_rope_autoimport_generate = 1
+
+
+let g:pymode_rope_autoimport_underlineds = 0
+
+let g:pymode_rope_codeassist_maxfixes = 10
+
+let g:pymode_rope_sorted_completions = 1
+
+let g:pymode_rope_extended_complete = 1
+
+let g:pymode_rope_autoimport_modules = ["os","shutil","datetime"]
+
+let g:pymode_rope_confirm_saving = 1
+
+let g:pymode_rope_global_prefix = "<C-x>p"
+
+let g:pymode_rope_local_prefix = "<C-c>r"
+
+let g:pymode_rope_vim_completion = 1
+
+let g:pymode_rope_guess_project = 1
+
+let g:pymode_rope_goto_def_newwin = ""
+
+let g:pymode_rope_always_show_complete_menu = 0
+
+" Enable python folding
+let g:pymode_folding = 0
+
+
+" Load pylint code plugin
+let g:pymode_lint = 0
+let g:pymode_lint_ignore = "E501"
+
+let g:PyLintCWindow = 0
+let g:PyLintDissabledMessages = 'C0103,C0111,C0301,W0141,W0142,W0212,W0221,W0223,W0232,W0401,W0613,W0631,E1101,E1120,R0903,R0904,R0913'
+
 
 "" Python Folding
 "" set foldmethod=indent
