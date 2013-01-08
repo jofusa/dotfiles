@@ -93,6 +93,11 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 
+syntax on
+filetype on
+au BufNewFile,BufRead *.pgc set filetype=c
+
+
 "" Whitespace
 ""set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
