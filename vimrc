@@ -110,6 +110,9 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+""Stamp shortcut S will replace word under cursor with last yanked
+"" so viwy then S
+nnoremap S diw"0P
 
 "" Python Folding
 "" set foldmethod=indent
