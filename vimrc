@@ -37,11 +37,11 @@ if has('python')
     Bundle 'szw/rope-vim'
     Bundle 'nvie/vim-flake8'
 
-    "flake8
-    let g:flake8_max_line_length=99
 
 endif
 
+"flake8
+let g:flake8_max_line_length=99
 
 
 " UltiSnips
