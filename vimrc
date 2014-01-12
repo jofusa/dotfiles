@@ -35,9 +35,14 @@ if has('python')
     Bundle 'SirVer/ultisnips'
     Bundle "jmcantrell/vim-virtualenv"
     Bundle 'szw/rope-vim'
+    Bundle 'nvie/vim-flake8'
 
+    "flake8
+    let g:flake8_max_line_length=99
 
 endif
+
+
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger       = "<tab>"
