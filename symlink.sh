@@ -14,3 +14,6 @@ ls -1 ./UltiSnips/* | xargs -n1 -I{} cp  {} ~/.vim/UltiSnips
 cp ./vimrc ~/.vimrc
  
 vim +BundleInstall +qall
+
+cp ./zshrc ~/.zshrc
+
