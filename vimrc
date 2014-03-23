@@ -8,12 +8,14 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
+Bundle 'ervandew/supertab'
+
 
 Bundle 'Syntastic' 
 Bundle 'altercation/vim-colors-solarized' 
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
 
 " Snippets
 Bundle "http://github.com/gmarik/snipmate.vim.git"
@@ -31,17 +33,15 @@ Bundle "ragtag.vim"
 
 
 if has('python')
-    Bundle 'klen/python-mode'
-    Bundle 'SirVer/ultisnips'
+""    Bundle 'klen/python-mode'
+    Bundle "SirVer/ultisnips"
     Bundle "jmcantrell/vim-virtualenv"
-    Bundle 'szw/rope-vim'
-    Bundle 'nvie/vim-flake8'
+    Bundle "davidhalter/jedi-vim"
+""    Bundle 'szw/rope-vim'
+""    Bundle 'nvie/vim-flake8'
 
 
 endif
-
-"flake8
-let g:flake8_max_line_length=99
 
 
 " UltiSnips
@@ -70,13 +70,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 
 
 
-let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 0 " Enable camle case completion
-let g:neocomplcache_omni_functions = {
-      \ 'python' : 'RopeCompleteFunc',
-      \ }
+"let g:neocomplcache_enable_smart_case = 1
+"let g:neocomplcache_enable_camel_case_completion = 0 " Enable camle case completion
+"let g:neocomplcache_omni_functions = {
+"      \ 'python' : 'RopeCompleteFunc',
+"     \ }
 
 if has('python')
     let g:easytags_python_enabled = 1
