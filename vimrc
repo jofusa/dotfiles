@@ -50,12 +50,6 @@ let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 nmap <Leader>rs :py UltiSnips_Manager.reset()<CR>
 
-
-"Command T mapping
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
-
 filetype plugin indent on 
 
 let g:UltiSnipsEditSplit = "vertical"
@@ -69,26 +63,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
   \&& b:NERDTreeType == "primary") | q | endif
 
 
-
-"let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-"let g:neocomplcache_enable_smart_case = 1
-"let g:neocomplcache_enable_camel_case_completion = 0 " Enable camle case completion
-"let g:neocomplcache_omni_functions = {
-"      \ 'python' : 'RopeCompleteFunc',
-"     \ }
-
 if has('python')
     let g:easytags_python_enabled = 1
 endif
-
-
-" <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ neocomplcache#start_manual_complete()
-
-
 
 " colorscheme slate
 set number
@@ -146,57 +123,6 @@ function! s:RunShellCommand(cmdline)
   1
 endfunction
 
-
-
-" Load rope plugin
-let g:pymode_rope = 1
-
-" Auto create and open ropeproject
-let g:pymode_rope_auto_project = 1
-
-" Enable autoimport
-let g:pymode_rope_enable_autoimport = 1
-
-" Auto generate global cache
-let g:pymode_rope_autoimport_generate = 1
-
-
-let g:pymode_rope_autoimport_underlineds = 0
-
-let g:pymode_rope_codeassist_maxfixes = 10
-
-let g:pymode_rope_sorted_completions = 1
-
-let g:pymode_rope_extended_complete = 1
-
-let g:pymode_rope_autoimport_modules = ["os","shutil","datetime"]
-
-let g:pymode_rope_confirm_saving = 1
-
-let g:pymode_rope_global_prefix = "<C-x>p"
-
-let g:pymode_rope_local_prefix = "<C-c>r"
-
-let g:pymode_rope_vim_completion = 1
-
-let g:pymode_rope_guess_project = 1
-
-let g:pymode_rope_goto_def_newwin = ""
-
-let g:pymode_rope_always_show_complete_menu = 0
-
-" Enable python folding
-let g:pymode_folding = 0
-
-
-" Load pylint code plugin
-let g:pymode_lint = 0
-let g:pymode_lint_ignore = "E501"
-
-let g:PyLintCWindow = 0
-let g:PyLintDissabledMessages = 'C0103,C0111,C0301,W0141,W0142,W0212,W0221,W0223,W0232,W0401,W0613,W0631,E1101,E1120,R0903,R0904,R0913'
-
-
 "" Python Folding
 "" set foldmethod=indent
 "" set foldlevel=99
@@ -225,3 +151,13 @@ function! s:RunShellCommand(cmdline)
   setlocal nomodifiable
   1
 endfunction
+
+
+
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
