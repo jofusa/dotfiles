@@ -7,8 +7,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
 
 
 Bundle 'Syntastic' 
@@ -18,7 +18,7 @@ Bundle 'scrooloose/nerdcommenter'
 "Bundle 'Shougo/neocomplcache'
 
 " Snippets
-Bundle "http://github.com/gmarik/snipmate.vim.git"
+"Bundle "http://github.com/gmarik/snipmate.vim.git"
 
 " Syntax highlight
 Bundle "cucumber.zip"
