@@ -11,6 +11,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'chrisbra/csv.vim'
 
 
 Bundle 'Syntastic' 
@@ -82,6 +84,8 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 syntax enable
+syntax on
+set t_Co=256
 
 colorscheme distinguished 
 

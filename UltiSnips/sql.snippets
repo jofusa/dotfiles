@@ -49,6 +49,6 @@ select * from ${1:table}
 endsnippet
 
 snippet drop
-drop table ${1:table} cascade;
+drop table if exists ${1:table} cascade;
 endsnippet
 
