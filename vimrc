@@ -1,5 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
+" copy from clipboard
+set clipboard=unnamed
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -43,6 +45,11 @@ if has('python')
 
 endif
 
+let mapleader="," 
+
+set mouse=a
+
+
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -67,16 +74,29 @@ if has('python')
     let g:easytags_python_enabled = 1
 endif
 
-" colorscheme slate
+
+"window shortcuts
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+syntax enable
+
+colorscheme distinguished 
+
+
+"let g:solarized_termcolors=256
+
 set number
 
 
-syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 
 syntax on
 filetype on
+" EPCG files should look like c
 au BufNewFile,BufRead *.pgc set filetype=c
 
 
@@ -94,14 +114,11 @@ set smartcase                   " ... unless they contain at least one capital l
 
 ""Stamp shortcut S will replace word under cursor with last yanked
 "" so viwy then S
+"copy word under cursor
+nnoremap Y viwy
+"paste word under cursor
 nnoremap S diw"0P
 
-"" Python Folding
-"" set foldmethod=indent
-"" set foldlevel=99
-nnoremap <space> za
-
-vnoremap <space> zf
 
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 function! s:RunShellCommand(cmdline)
@@ -127,8 +144,12 @@ endfunction
 "" set foldmethod=indent
 "" set foldlevel=99
 nnoremap <space> za
-
 vnoremap <space> zf
+
+" Swap ; and :  Convenient.
+nnoremap ; :
+"nnoremap : ;
+
 
 
 
