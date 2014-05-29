@@ -42,7 +42,7 @@ if has('python')
     Bundle "jmcantrell/vim-virtualenv"
     Bundle "davidhalter/jedi-vim"
 ""    Bundle 'szw/rope-vim'
-""    Bundle 'nvie/vim-flake8'
+    Bundle 'nvie/vim-flake8'
 
 
 endif

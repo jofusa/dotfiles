@@ -23,6 +23,9 @@ fi
 ls -1 ./colors/* | xargs -n1 -I{} cp  {} ~/.vim/colors
 
 cp ./vimrc ~/.vimrc
+cp ./.gitconfig ~/.gitconfig
+cp ./.githelpers ~/.githelpers
+
  
 vim +BundleInstall +qall
 
