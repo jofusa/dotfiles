@@ -1,10 +1,10 @@
 [user]
-    name = Kit La Touche
-    email = kit@transneptune.net
+    name = John Dennison
+    email = dennison.john@gmail.com
 [github]
-    user = wlonk
+    user = jofusa
 [ghi]
-    token = !security find-internet-password -a wlonk -s github.com -l 'ghi token' -w
+    token = !security find-internet-password -a jofusa -s github.com -l 'ghi token' -w
 [core]
     editor = vim
 [color]
