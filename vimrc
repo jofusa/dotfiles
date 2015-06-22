@@ -13,6 +13,7 @@ Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'chrisbra/csv.vim'
+Bundle 'elzr/vim-json'
 
 
 Bundle 'Syntastic' 
@@ -39,6 +40,7 @@ Bundle "ragtag.vim"
 if has('python')
 ""    Bundle 'klen/python-mode'
     Bundle "SirVer/ultisnips"
+    Plugin 'honza/vim-snippets'
     Bundle "jmcantrell/vim-virtualenv"
     Bundle "davidhalter/jedi-vim"
 ""    Bundle 'szw/rope-vim'
