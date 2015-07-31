@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 if [ ! -d ~/.vim/UltiSnips/ ]; then
    echo "Making Directory"
@@ -30,7 +30,6 @@ cp ./.githelpers ~/.githelpers
 vim +BundleInstall +qall
 
 
-
 #cp ./zshrc ~/.zshrc
 
-source ~/.zshrc
+#source ~/.zshrc
